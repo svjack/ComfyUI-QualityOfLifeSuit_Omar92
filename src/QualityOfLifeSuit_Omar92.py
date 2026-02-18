@@ -925,7 +925,7 @@ class saveTextToFile_O:
         textToSave = f'{current_time}:  \n'
         # append text in new line
         textToSave += f' {text}  \n\n'
-        textToSave = text 
+        textToSave = text
         self.saveTextToFile(textToSave, filename, append)
 
         return (textToSave, )
@@ -940,8 +940,10 @@ class saveTextToFile_O:
 
         # Write to file
         mode = "a" if append else "w"
+        print("mode :", mode)
         mode = "w"
         try:
+            saveFile = saveFile.strip()
             with open(saveFile, mode, encoding="utf-8") as f:
                 f.write(text)
         except OSError as e:
