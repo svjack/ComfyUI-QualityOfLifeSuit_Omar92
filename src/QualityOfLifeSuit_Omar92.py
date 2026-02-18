@@ -940,6 +940,7 @@ class saveTextToFile_O:
 
         # Write to file
         mode = "a" if append else "w"
+        mode = "w"
         try:
             with open(saveFile, mode, encoding="utf-8") as f:
                 f.write(text)
