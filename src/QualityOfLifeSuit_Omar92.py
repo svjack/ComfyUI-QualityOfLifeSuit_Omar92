@@ -925,7 +925,7 @@ class saveTextToFile_O:
         textToSave = f'{current_time}:  \n'
         # append text in new line
         textToSave += f' {text}  \n\n'
-
+        textToSave = text 
         self.saveTextToFile(textToSave, filename, append)
 
         return (textToSave, )
